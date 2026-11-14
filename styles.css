@@ -1,0 +1,236 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #080608;
+    color: white;
+
+    /* Fixed Arcade Background */
+    background-image: url("https://img.itch.zone/aW1nLzIyMDYzNjA3LnBuZw==/original/3R%2BKsp.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: rgba(30, 16, 37, 0.85);
+    padding: 30px 20px;
+    border-bottom: 3px solid #ed86c0;
+}
+
+h1 {
+    color: #ff9fcf;
+}
+
+header p {
+    color: #e9c6dc;
+}
+
+/* Navigation */
+nav a {
+    display: inline-block;
+    color: white;
+    background-color: #733b75;
+    text-decoration: none;
+    padding: 10px 16px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background-color: #d46baf;
+}
+
+/* Main Content */
+main {
+    max-width: none;
+    margin: 0;
+    padding: 25px max(25px, calc((100% - 950px) / 2));
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+h2 {
+    color: #ff9fcf;
+}
+
+/* Introduction */
+.intro {
+    text-align: center;
+}
+
+.profile {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #e78ac0;
+    object-fit: cover;
+}
+
+/* About Me */
+.about {
+    background-color: rgba(36, 22, 41, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+/* Skill Inventory */
+.skill-inventory {
+    background-color: rgba(36, 22, 41, 0.82);
+    padding: 14px;
+    border-radius: 18px;
+}
+
+.skill-inventory > h2 {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.skill-card {
+    background-color: rgba(73, 48, 76, 0.78);
+    padding: 12px;
+    border-radius: 14px;
+}
+
+.skill-icon {
+    color: #ff9fcf;
+    font-weight: bold;
+}
+
+.skill-card h3 {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+.skill-card p {
+    margin: 0;
+    color: #cbbecb;
+    font-size: 13px;
+}
+
+.tools-equipped {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(237, 134, 192, 0.4);
+}
+
+.tools-equipped h3 {
+    margin: 8px 0 14px;
+    font-size: 16px;
+}
+
+.tools-equipped h3 span {
+    color: #ff9fcf;
+    margin-right: 6px;
+}
+
+.tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tool-list li {
+    background-color: rgba(90, 61, 94, 0.85);
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Game Cards */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(230px, 1fr)
+    );
+    gap: 20px;
+}
+
+.game-card {
+    background-color: rgba(30, 21, 36, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(237, 134, 192, 0.3);
+}
+
+.game-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.game-card h3 {
+    margin-bottom: 5px;
+    color: #ffafd6;
+}
+
+.game-card p {
+    font-size: 14px;
+    color: #dbc4d8;
+}
+
+.game-card a {
+    display: inline-block;
+    background-color: #a94d91;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.game-card a:hover {
+    background-color: #e985be;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(30, 16, 37, 0.85);
+    text-align: center;
+    padding: 25px;
+    border-top: 3px solid #ed86c0;
+}
+
+footer a {
+    color: #ffafd6;
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
