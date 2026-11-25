@@ -152,6 +152,55 @@ h2 {
     font-size: 14px;
 }
 
+/* Gallery Preview */
+.gallery-preview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    background-color: rgba(36, 22, 41, 0.9);
+    border: 1px solid rgba(237, 134, 192, 0.45);
+    border-radius: 18px;
+}
+
+.gallery-preview h2 {
+    margin-top: 0;
+}
+
+.gallery-preview-copy p {
+    color: #dbc4d8;
+    line-height: 1.5;
+}
+
+.gallery-link {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: #a94d91;
+    color: white;
+    text-decoration: none;
+}
+
+.gallery-link:hover {
+    background-color: #e985be;
+}
+
+.gallery-preview-images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.gallery-preview-images img {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px solid rgba(237, 134, 192, 0.65);
+    border-radius: 12px;
+    object-fit: cover;
+}
+
 /* Game Cards */
 .game-container {
     display: grid;
@@ -225,6 +274,11 @@ footer a {
         grid-template-columns: 1fr;
     }
 
+    .gallery-preview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
     header {
         padding: 20px 10px;
     }
@@ -233,4 +287,142 @@ footer a {
         padding: 8px 12px;
         font-size: 14px;
     }
+}
+
+/* Album Gallery Page */
+.gallery-page-header {
+    text-align: center;
+}
+
+.gallery-page-header h1 {
+    margin-bottom: 8px;
+}
+
+.gallery-page-header p {
+    color: #e9c6dc;
+}
+
+.gallery-page-header nav {
+    margin-top: 18px;
+}
+
+.album-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 30px;
+}
+
+.album-navigation a {
+    padding: 8px 12px;
+    border: 1px solid rgba(237, 134, 192, 0.55);
+    border-radius: 999px;
+    color: #ffafd6;
+    text-decoration: none;
+}
+
+.album-navigation a:hover {
+    background-color: rgba(169, 77, 145, 0.45);
+}
+
+.album-section {
+    scroll-margin-top: 20px;
+    margin-bottom: 36px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: rgba(36, 22, 41, 0.9);
+}
+
+.album-section h2 {
+    margin-top: 0;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+}
+
+.album-grid figure {
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid rgba(237, 134, 192, 0.4);
+    border-radius: 12px;
+    background-color: rgba(30, 21, 36, 0.9);
+    cursor: zoom-in;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.album-grid figure:hover,
+.album-grid figure:focus-visible {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(237, 134, 192, 0.3);
+}
+
+.album-grid figure:focus-visible {
+    outline: 2px solid #ff9fcf;
+    outline-offset: 3px;
+}
+
+.album-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.image-viewer {
+    position: fixed;
+    width: min(94vw, 1200px);
+    max-width: none;
+    max-height: 92vh;
+    padding: 16px;
+    border: 1px solid rgba(237, 134, 192, 0.65);
+    border-radius: 16px;
+    background-color: #1e1524;
+    color: white;
+}
+
+.image-viewer::backdrop {
+    background-color: rgba(0, 0, 0, 0.88);
+}
+
+.image-viewer form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.image-viewer-close {
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #a94d91;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.image-viewer-close:hover {
+    background-color: #e985be;
+}
+
+.image-viewer img {
+    display: block;
+    width: 100%;
+    max-height: calc(92vh - 80px);
+    object-fit: contain;
+}
+
+.album-grid figcaption {
+    padding: 8px 10px;
+    color: #dbc4d8;
+    font-size: 12px;
+}
+
+.gallery-back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ffafd6;
 }
